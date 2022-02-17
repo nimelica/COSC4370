@@ -22,14 +22,14 @@ void DrawEllipse(BMP& newObj, long x_central, long y_central, long rad_x, long r
         DrawPoints(newObj, x, y, x_central, y_central);
         if (quad1 < 0){
             ++x;
-            stop_x = stop_x + (2 * rad_y * rad_y);
-            quad1 = quad1 + stop_x + (rad_y * rad_y);
+            stop_x += (2 * rad_y * rad_y);
+            quad1 += stop_x + pow(rad_y,2);
         }else{
             ++x;
             --y;
-            stop_x = stop_x + (2 * rad_y * rad_y);
-            stop_y = stop_y - (2 * rad_x * rad_x);
-            quad1 = quad1 + stop_x - stop_y + (rad_y * rad_y);
+            stop_x += (2 * rad_y * rad_y);
+            stop_y -= (2 * rad_x * rad_x);
+            quad1 += stop_x - stop_y + pow(rad_y,2);
         }
     }
     quad2 = (pow(rad_y,2) * ((x + 0.5) * (x + 0.5))) +
@@ -40,19 +40,17 @@ void DrawEllipse(BMP& newObj, long x_central, long y_central, long rad_x, long r
         
         if (quad2 > 0){
             y--;
-            stop_y = stop_y - (2 * rad_x * rad_x);
-            quad2 = quad2 + (rad_x * rad_x) - stop_y;
-        }
-        else{
+            stop_y -= (2 * rad_x * rad_x);
+            quad2 += pow(rad_x,2) - stop_y;
+        }else{
             --y;
             ++x;
-            stop_x = stop_x + (2 * rad_y * rad_y);
-            stop_y = stop_y - (2 * rad_x * rad_x);
-            quad2 = quad2 + stop_x - stop_y + (rad_x * rad_x);
+            stop_x +=  (2 * rad_y * rad_y);
+            stop_y -= (2 * rad_x * rad_x);
+            quad2 += stop_x - stop_y + pow(rad_x,2);
         }
     }
 }
-
 int main(){
   BMP newObj(1792, 1792, false);
 
@@ -68,4 +66,3 @@ int main(){
   newObj.write("output.bmp");
   return 0;
 }
-
