@@ -1,0 +1,11 @@
+THE SOURCES I USED
+-------------------
+
+1) To be sure about calculating the x and y radius of the ellipse
+   i) https://www.emathhelp.net/en/calculators/algebra-2/ellipse-calculator/?type=f&f=%28x%2F12%29%5E2+%2B+%28y%2F6%29%5E2+%3D+64%5E2&cx=&cy=&f1x=&f1y=&f2x=&f2y=&v1x=&v1y=&v2x=&v2y=&cv1x=&cv1y=&cv2x=&cv2y=&ma=&mi=&e=&a=&d1=&d2=&p1x=&p1y=&p2x=&p2y=&p3x=&p3y=
+
+2) To apply midpoint ellipse algorithm:
+   -> I looked at many examples to understand:
+      i) https://www.cpp.edu/~raheja/CS445/MEA.pdf
+      ii) https://www.geeksforgeeks.org
+      iii) given reading pdf
