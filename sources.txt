@@ -9,3 +9,7 @@ THE SOURCES I USED
       i) https://www.cpp.edu/~raheja/CS445/MEA.pdf
       ii) https://www.geeksforgeeks.org
       iii) given reading pdf
+      
+3) Other sources I used to be able to write a detailed raport:
+   i) https://www.geeksforgeeks.org/midpoint-ellipse-drawing-algorithm/
+   ii) https://courses.lumenlearning.com/waymakercollegealgebra/chapter/equations-of-ellipses/
