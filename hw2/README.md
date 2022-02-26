@@ -1,12 +1,17 @@
 # ASSIGNMENT 2
 ## OpenGL 3D Objects
 
-### How to run?
+### SETUP
 * Create a [replit](https://replit.com/~) or a new project on your personal IDE
 * Fork this [repository](https://replit.com/@MartinLee7/Template-hw2)
 * Extract it on replit console using the following command: ```tar -xzvf freeglut-3.2.1.tar.gz```
 * Get permission to read and execute script.sh by using the following command: ```chmod u=rx script.sh```
 * Then run script.sh by using ```./script.sh```
+
+### HOW TO USE?
+__Controls: between problems__
+* _right arrow_: next 3D object 
+* _left arrow_: previous 3D object
 
 #### First 3D OBJECT: Teapot Cycle
 * ![output1](https://user-images.githubusercontent.com/76903207/155862061-19575752-ab47-41cf-8099-5435d620dc3d.png)
