@@ -9,9 +9,11 @@
 * Then run script.sh by using ```./script.sh```
 
 ### HOW TO USE?
-__Controls: between problems__
-* _right arrow_: next 3D object 
-* _left arrow_: previous 3D object
+__Controls__
+* _left mouse button_: rotates
+* _right mouse button_: zooms
+* _right arrow_: next problem's 3D object 
+* _left arrow_: previous problem's 3D object
 
 #### First 3D OBJECT: Teapot Cycle
 * ![output1](https://user-images.githubusercontent.com/76903207/155862061-19575752-ab47-41cf-8099-5435d620dc3d.png)
