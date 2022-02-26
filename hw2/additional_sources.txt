@@ -5,4 +5,5 @@ The Online Sources I used:
 3) https://community.khronos.org/t/creating-teapot-more-than-once/20545/6
 4) https://stackoverflow.com/questions/26075231/c-opengl-rendering-large-amount-of-teapots
 5) http://www.opengl-tutorial.org/
-6) 
+6) https://github.com/RockefellerA/RobotArm
+7) http://inf.ufes.br/~thomas/graphics/OpenGL/robot/robot_opengl.html
