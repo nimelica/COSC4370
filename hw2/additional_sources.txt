@@ -1,0 +1,8 @@
+The Online Sources I used:
+
+1) https://web.cs.wpi.edu/~emmanuel/courses/cs543/slides/lecture04_p2.pdf
+2) ComputerGraphicsPrinciplesPractice.pdf textbook
+3) https://community.khronos.org/t/creating-teapot-more-than-once/20545/6
+4) https://stackoverflow.com/questions/26075231/c-opengl-rendering-large-amount-of-teapots
+5) http://www.opengl-tutorial.org/
+6) 
