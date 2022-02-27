@@ -52,15 +52,14 @@ void problem1(){
 
   //create a new teapot while the camera angle access 360 degree
   while(radius != full_degree){ 
-		glPushMatrix(); //duplicate/push matrix
-		glTranslatef(0, 0, 0); //move along x=0, y=0, z=0 axis
-		glRotatef(radius, 0, 0, 1); //rotate radius on z axis
-		glTranslatef(1, 0, 0);
-		glutSolidTeapot(teapot_size);
-		glPopMatrix();
-
+    glPushMatrix(); //duplicate/push matrix
+    glTranslatef(0, 0, 0); //move along x=0, y=0, z=0 axis
+    glRotatef(radius, 0, 0, 1); //rotate radius on z axis
+    glTranslatef(1, 0, 0);
+    glutSolidTeapot(teapot_size);
+    glPopMatrix();
     radius += 36; //provides 10 teapots
-	}
+   }
 }
 
 /*PROBLEM #2: Cube Stairs*/
