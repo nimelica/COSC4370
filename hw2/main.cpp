@@ -44,7 +44,7 @@ float shininess[] = {50.0};
 
 /***********************************************************************************/
 
-/*PROBLEM #1: Teopot Cycle*/
+/*PROBLEM #1: Utah Teopot Cycle*/
 void problem1(){
   float radius{.0f};  //start from radius 0...
   float full_degree{360};  //...end when radius 360 (cycle)
@@ -55,14 +55,14 @@ void problem1(){
     glPushMatrix(); //duplicate/push matrix
     glTranslatef(0, 0, 0); //move along x=0, y=0, z=0 axis
     glRotatef(radius, 0, 0, 1); //rotate radius on z axis
-    glTranslatef(1, 0, 0);
-    glutSolidTeapot(teapot_size);
+    glTranslatef(1, 0, 0); //along with x-axis
+    glutSolidTeapot(teapot_size); //create/draw teapot with a size of 0.3
     glPopMatrix();
     radius += 36; //provides 10 teapots
    }
 }
 
-/*PROBLEM #2: Cube Stairs*/
+/*PROBLEM #2: The Cube Ladder/Stairs*/
 void problem2(){
   unsigned int max_stair{16}; //we want 15 stair (cube)
   unsigned int curr_num{1}; //start from one stair cube
@@ -75,22 +75,22 @@ void problem2(){
   while(curr_num < max_stair){
     glPushMatrix();
     glTranslatef(xdir, ydir, 0); //move along x and y direction
-    glScalef(1, curr_num*.5, 1); //1 x, currnum*1/2 y, 1 is z axis
+    glScalef(1, curr_num*.5, 1); //1 x, currnum*1/2 y (increase height), 1 is z axis
     glutSolidCube(stair_size); 
     glPopMatrix();
 
-   ++xdir, ydir += increment_height;
+   ++xdir, ydir += increment_height; //increase heigt along with the y-axis
     ++curr_num;
   }
 }
 
-/*PROBLEM #3: Teopot Pyramid*/
+/*PROBLEM #3: Utah Teopot Pyramid*/
 void problem3(){
   int pyramid_level{6}; //# of level/row in the pyramid
   int level{1};
   float teapot_size{0.25};
   for(; level <= pyramid_level; ++level){
-    float ratio{};
+    float ratio{}; //to balance
     if(level % 2 == 0){
       ratio = -0.5f * level + 0.5f;
     }else{
@@ -102,7 +102,7 @@ void problem3(){
       //pyramid_level/2 -> to put the camera at the center of the pyramid
       //-level because otherwise the picramid will going to upside down
       glTranslatef(ratio, (pyramid_level/2 - level) * .60f, 0);
-      glutSolidTeapot(teapot_size);
+      glutSolidTeapot(teapot_size); //create teapot with determined size
 
       ++ratio;
       glPopMatrix();
@@ -135,7 +135,7 @@ void problem4(){
    glutSolidCube (1.0);
    glPopMatrix();
    
-   //Bottom Part of Thumb finger
+   //Bottom Joint of Thumb finger
    glPushMatrix();
    glTranslatef (0.0, 0.125, -0.1);
    glRotatef ((GLfloat) tumb_fngr, 0.0, 0.0, 1.0);
@@ -146,7 +146,7 @@ void problem4(){
    glutSolidCube (0.7);
    glPopMatrix();
 
-   //Upper Part of Thumb finger
+   //Upper Joint of Thumb finger
    glTranslatef (0.15, 0.0, -0.8);
    glRotatef ((GLfloat) tumb_up, 0.0, 0.0, 1.0);
    glTranslatef (0.25, 0.0, 0.8);
@@ -157,7 +157,7 @@ void problem4(){
    glPopMatrix();
    glPopMatrix();
    
-   //Bottom Part Pointer Finger
+   //Bottom Joint Pointer Finger
    glPushMatrix();
    glTranslatef (0.5, 0.1, 0.0);
    glRotatef ((GLfloat) point_fngr, 0.0, 0.0, 1.0);
@@ -168,7 +168,7 @@ void problem4(){
    glutSolidCube (0.8);
    glPopMatrix();
 
-   //Upper part of Pointer finger
+   //Upper Joint of Pointer finger
    glTranslatef (0.5, 0.0, 0.0);
    glRotatef ((GLfloat) point_up, 0.0, 0.0, 1.0);
    glTranslatef (0.0, 0.0, 0.0);
@@ -179,7 +179,7 @@ void problem4(){
    glPopMatrix();       
    glPopMatrix();
  
-   //Upper Part of Middle Finger
+   //Upper Joint of Middle Finger
    glPushMatrix();
    glTranslatef (0.5, 0.10, 0.0);
    glRotatef ((GLfloat) middle_fngr, 0.0, 0.0, 1.0);
@@ -190,7 +190,7 @@ void problem4(){
    glutSolidCube (0.8);
    glPopMatrix();
 
-   //Bottom Part of Middle Finger
+   //Bottom Joint of Middle Finger
    glTranslatef (0.5, 0.0, 0.0);
    glRotatef ((GLfloat) middle_up, 0.0, 0.0, 1.0);
    glTranslatef (0.0, 0.0, 0.0);
@@ -201,7 +201,7 @@ void problem4(){
    glPopMatrix();
    glPopMatrix();
    
-   //Upper Part of Ring Finger
+   //Upper Joint of Ring Finger
    glPushMatrix();
    glTranslatef (0.5, 0.1, 0.0);
    glRotatef ((GLfloat) ring_fngr, 0.0, 0.0, 1.0);
@@ -212,7 +212,7 @@ void problem4(){
    glutSolidCube (0.8);
    glPopMatrix();
 
-  //Bottom Part of Ring Finger
+  //Bottom Joint of Ring Finger
    glTranslatef (0.5, 0.1, 0.0);
    glRotatef ((GLfloat) ring_up, 0.0, 0.0, 1.0);
    glTranslatef (0.0, -0.1,  0.0);
@@ -223,7 +223,7 @@ void problem4(){
    glPopMatrix();
    glPopMatrix();
    
-   //Bottom Part Pinky Finger
+   //Bottom Joint Pinky Finger
    glPushMatrix();
    glTranslatef (0.2, 0.1, 0.0);
    glRotatef ((GLfloat) tiny_fngr, 0.0, 0.0, 1.0);
@@ -234,7 +234,7 @@ void problem4(){
    glutSolidCube (0.8);
    glPopMatrix();
 
-   //Upper Part of Pinky Finger
+   //Upper Joint of Pinky Finger
    glTranslatef (0.4, 0.1, 0.0);
    glRotatef ((GLfloat) tiny_up, 0.0, 0.0, 1.0);
    glTranslatef (0.0, -0.1, 0.0);
@@ -259,9 +259,9 @@ void display() {
 	glDisable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
 	glBegin(GL_LINES);
-		glColor3f(1,0,0); glVertex3f(0,0,0); glVertex3f(1,0,0); // x axis
-		glColor3f(0,1,0); glVertex3f(0,0,0); glVertex3f(0,1,0); // y axis
-		glColor3f(0,0,1); glVertex3f(0,0,0); glVertex3f(0,0,1); // z axis
+	glColor3f(1,0,0); glVertex3f(0,0,0); glVertex3f(1,0,0); // x axis
+	glColor3f(0,1,0); glVertex3f(0,0,0); glVertex3f(0,1,0); // y axis
+	glColor3f(0,0,1); glVertex3f(0,0,0); glVertex3f(0,0,1); // z axis
 	glEnd(/*GL_LINES*/);
 
 	glEnable(GL_LIGHTING);
@@ -313,7 +313,7 @@ void mouseMoved(int x, int y) {
 }
 
 void keyboard(unsigned char key, int x, int y) {
-	curProblem = key-'0';
+    curProblem = key-'0';
     if (key == 'q' || key == 'Q' || key == 27){
         exit(0);
     }
