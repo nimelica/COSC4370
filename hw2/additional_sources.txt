@@ -7,3 +7,5 @@ The Online Sources I used:
 5) http://www.opengl-tutorial.org/
 6) https://github.com/RockefellerA/RobotArm
 7) http://inf.ufes.br/~thomas/graphics/OpenGL/robot/robot_opengl.html
+8) https://www.codemiles.com/c-opengl-examples/drawing-teapot-using-opengl-t9010.html
+9) github examples
