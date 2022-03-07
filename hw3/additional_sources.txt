@@ -1,0 +1,3 @@
+  i) https://learnopengl.com/code_viewer.php?code=lighting/basic_lighting-exercise2
+ ii) https://github.com/JoeyDeVries/LearnOpenGL
+iii) https://learnopengl.com/Getting-started/Camera
