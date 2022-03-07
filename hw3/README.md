@@ -2,7 +2,7 @@
 ## 3D Viewing and Shaders
 
 ### Setup
-* Fork this [template](Fork this link: https://replit.com/@MartinLee7/Template)
+* Fork this [template](https://replit.com/@MartinLee7/Template)
 * Execute script.sh by using the following command: ```chmod u=rx script.sh```
 * Run the code using ```./script.sh```
 
