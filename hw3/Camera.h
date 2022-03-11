@@ -69,6 +69,7 @@ public:
 
 /*Reference: https://github.com/JoeyDeVries/LearnOpenGL*/
     glm::mat4 GetViewMatrix(){
+      //Camera Position - Target(FRONT) - Up
       return glm::lookAt(Position, Position + Front, Up);
     }
 
