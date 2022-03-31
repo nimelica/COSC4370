@@ -1,0 +1,3 @@
+https://learnopengl.com/Advanced-OpenGL/Cubemaps
+https://learnopengl.com/Getting-started/Hello-Triangle
+http://www.opengl-tutorial.org/beginners-tutorials/tutorial-5-a-textured-cube/
