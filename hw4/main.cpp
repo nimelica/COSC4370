@@ -156,14 +156,15 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLvoid*)0);
     glEnableVertexAttribArray(0);
 
-    //set the UV buffer
+	
+    // TODO: UV buffer----------------------------------------------
     glGenBuffers(1, &UVBO);
-	  glBindBuffer(GL_ARRAY_BUFFER, UVBO);
-	  glBufferData(GL_ARRAY_BUFFER, sizeof(uv), uv, GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, UVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(uv), uv, GL_STATIC_DRAW);
+    // -------------------------------------------------------------
 
   
-    //UV attribute
-	  glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
     glEnableVertexAttribArray(1);
 
 
@@ -200,9 +201,9 @@ int main()
         glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
-
-        //bind texture
+        // TODO: bind your texture---------------------------------------------
         glBindTexture(GL_TEXTURE_2D, texture);
+	//--------------------------------------------------------------------
       
 
         // Draw the container (using container's vertex attributes)
